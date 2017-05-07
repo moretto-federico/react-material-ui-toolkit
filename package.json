@@ -1,7 +1,7 @@
 {
-  "name": "react ",
+  "name": "react-material-ui-toolkit",
   "version": "0.0.1",
-  "description": "React XXX",
+  "description": "react-material-ui-toolkit",
   "main": "XXX.jsx",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
@@ -44,10 +44,11 @@
   },
   "dependencies": {
     "chai": "^3.5.0",
-    "react": "~15.1.0",
-    "react-dom": "~15.1.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.5.1",
+    "react-tap-event-plugin":"^2.0.1",
     "redux": "^3.5.2",
     "material-ui": "^0.17.3"
   }
