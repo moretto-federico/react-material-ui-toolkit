@@ -8,7 +8,7 @@ const root = {
 
 module.exports = {
   entry: {
-    app: ['./src/view/login/Login/index.jsx'],
+    app: ['./src/view/boot.js'],
   },
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -67,13 +67,13 @@ module.exports = {
       },
     ],
   },
-    // produce map source file to use in browser debugger
+  // produce map source file to use in browser debugger
   devtool: 'eval',
-    // TODO to redirect some request
-    // proxy: {
-    // "/todo/todo*": {
-    //     target: 'https://localhost:8080/todo/',
-    //     secure: false
-    //   }
-    // }
+  // TODO to redirect some request
+  // proxy: {
+  // "/todo/todo*": {
+  //     target: 'https://localhost:8080/todo/',
+  //     secure: false
+  //   }
+  // }
 };

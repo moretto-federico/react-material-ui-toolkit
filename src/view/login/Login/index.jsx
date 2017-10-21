@@ -1,35 +1,52 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import Dialog from 'material-ui/Dialog';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-export default class Login extends React.Component {    
+export default class Login extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {open:true};
+  constructor() {
+    super();
+    this.state = { open: true };
 
-        this.handleClose = this.handleClose.bind(this);
-    }
+    this.handleClose = this.handleClose.bind(this);
+  }
 
-    handleClose() {
-        this.setState({open:false});
-    }
+  /*
+  getChildContext() {
+    return {
+      muiTheme: ThemeManager.getCurrentTheme(),
+    };
+  }*/
 
-    render() {
-      const actions = [<RaisedButton label="Primary" primary={true} onClick={this.handleClose} />];
+  handleClose() {
+    this.setState({ open: false });
+  }
 
-      return (
+  render() {
+    const actions = [<RaisedButton label="Primary" primary onClick={this.handleClose} />];
+
+    return (
+      <MuiThemeProvider>
         <Dialog
-            title="Login"
-            actions={actions}
-            modal={false}
-            open={this.state.open}
-            onRequestClose={this.handleClose}
+          title="Login"
+          actions={actions}
+          modal={false}
+          open={this.state.open}
+          onRequestClose={this.handleClose}
         >
-            <TextField floatingLabelText="User Name or email"/>
-            <TextField floatingLabelText="Password" type="password"/>
+          <TextField floatingLabelText="User Name or email" />
+          <TextField floatingLabelText="Password" type="password" />
         </Dialog>
-      );   
-    }
+      </MuiThemeProvider >
+    );
+  }
 }
+
+Login.childContextTypes = {
+  muiTheme: PropTypes.object,
+};
