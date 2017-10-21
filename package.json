@@ -35,8 +35,7 @@
     "eslint-plugin-react": "^4.3.0",
     "file-loader": "^0.8.5",
     "mocha": "^3.0.2",
-    "node-sass": "^3.8.0",
-    "react-addons-test-utils": "~15.1.0",
+    "react-addons-test-utils": "^15.1.0",
     "remote-redux-devtools": "^0.3.3",
     "rimraf": "^2.5.3",
     "webpack": "^1.13.1",
@@ -48,7 +47,7 @@
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.5.1",
-    "react-tap-event-plugin":"^2.0.1",
+    "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.5.2",
     "material-ui": "^0.17.3"
   }

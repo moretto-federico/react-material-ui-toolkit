@@ -8,7 +8,7 @@ const root = {
 
 module.exports = {
   entry: {
-    app: ['./src/view/Main/index.jsx'],
+    app: ['./src/view/login/Login/index.jsx'],
   },
   output: {
     path: path.resolve(__dirname, 'build'),
